@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: secure-operator
+  namespace: default
+
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: developer
+  namespace: default
+
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: devops
+  namespace: default

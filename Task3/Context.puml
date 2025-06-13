@@ -1,0 +1,16 @@
+@startuml
+title PropDevelopment Context Diagram
+
+top to bottom direction
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+Person(user, "Собственник", "Клиент")
+System(JKU, "Группа сервисов ЖКУ", Предоставление услуг собственникам")
+
+System_Ext(partner, "Партнер", "Интеллектуальный доступ")
+
+Rel(user, JKU, "Использование системы")
+Rel(partner,JKU,"Оказание услуг интеллектуального доступа")
+
+@enduml
