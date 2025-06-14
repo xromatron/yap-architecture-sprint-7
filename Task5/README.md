@@ -41,6 +41,7 @@
 ```shell
     kubectl run test-$RANDOM --rm -i -t --image=alpine -- sh
 ```
+
 В терминале введем
 ```shell
     wget -qO- --timeout=2 http://front-end-app
@@ -61,7 +62,9 @@
 
 Применить сетевую политику
 ```shell
+    kubectl apply -f deny-all.yaml
     kubectl apply -f non-admin-api-allow.yaml
+    kubectl apply -f admin-api-allow.yaml
 ```
 
 Выполним проверку доступа из admin-front-end-app к back-end-api-app
